@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { Text, View, Picker, StyleSheet, Button, Alert} from "react-native";
+const Joke = require('awesome-dev-jokes');
 
 export default function App() {
   const [selectedValue, setSelectedValue] = useState("java");
   return (
     <View style={styles.container}>
       <Text>Pick a programming language!</Text>
+      <Text>{Joke.getRandomJoke()}</Text>
       <View style={styles.pick}>
         <Picker
           selectedValue={selectedValue}
-          style={{ fontSize: 15, height: 10, width: 150 }}
+          style={{ fontSize: 15, height: 50, width: 150 }}
           onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
         >
           <Picker.Item label="Java" value="System.out.println(Hello);" />
