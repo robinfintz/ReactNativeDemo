@@ -19,6 +19,7 @@ export default function App() {
           <Picker.Item label="Python" value="print(Hello)" />
           <Picker.Item label="C++" value="cout >> Hello" />
           <Picker.Item label="C" value="printf(Hello)" />
+          <Picker.Item label="English" value="Hello!" />
         </Picker>
       </View>
       <Button
